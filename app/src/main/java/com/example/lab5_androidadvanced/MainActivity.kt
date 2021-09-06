@@ -44,7 +44,7 @@ class MainActivity2 : AppCompatActivity() {
 
         binding.listView.adapter = adapter
 
-        binding.listView.setOnItemClickListener { adapterView, view, index, l ->
+        binding.listView.setOnItemClickListener { _, _, index, _ ->
             val intent: Intent = Intent(this, WebViewActivity::class.java)
             intent.putExtra("link", newsList[index].link)
             startActivity(intent)
